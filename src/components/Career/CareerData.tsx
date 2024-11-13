@@ -26,7 +26,7 @@ export const CareerData: CareerDataItem[] = [
 
     },
     {
-        title: '高知県立大学法人 高知工科大学 情報学群 卒業',
+        title: '高知県立大学法人 高知工科大学 情報学群 卒業予定',
         date: '2024年3月',
 
     },
