@@ -1,0 +1,64 @@
+.Sidebar {
+    height: 100%;
+    width: 250px;
+    background-color: var(--theme-color);
+}
+
+.SidebarList {
+    height: auto;
+    padding: 0;
+    width: 100%;
+}
+
+.SidebarList #active {
+    background-color: var(--hovar-color);
+}
+
+.SidebarList .row {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.SidebarList .row:hover {
+    cursor: pointer;
+    background-color: var(--hovar-color);
+}
+
+.SidebarList .row #icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+
+}
+
+.SidebarList .row #title {
+    flex: 70%;
+}
+
+.SidebarIcon {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+.SidebarIcon img {
+    width: 70%;
+}
+
+.SidebarIcon code {
+    color: white;
+    font-weight: 600;
+    font-size: 16px
+}
+
+.SidebarIcon p {
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+}
