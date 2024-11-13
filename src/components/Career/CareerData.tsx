@@ -31,7 +31,7 @@ export const CareerData: CareerDataItem[] = [
 
     },
     {
-        title: '総合研究大学院大学 情報学コース (国立情報学研究所) 入学',
+        title: '総合研究大学院大学 情報学コース (国立情報学研究所) 入学予定',
         date: '2024年4月',
     },
 ]

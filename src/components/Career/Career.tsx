@@ -20,11 +20,11 @@ export default function Sidebar(): JSX.Element {
 function CarrerCard(value: CareerDataItem, key: number): JSX.Element {
     return (
         <li>
-            <p className='timeline-date'>
-                {value.date}
-            </p>
+            <div className='timeline-date'>
+                <div>{value.date}</div>
+            </div>
             <div className='timeline-content'>
-                <h3>{value.title}</h3>
+                <span>{value.title}</span>
             </div>
         </li>
     );

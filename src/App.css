@@ -1,3 +1,7 @@
+* {
+  border: solid 1px blue;
+}
+
 :root {
   --theme-color: #2d445d;
   --hovar-color: #3b627a;
@@ -20,7 +24,9 @@
   width: 100%;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   padding-top: 10pt;
   padding-left: 10pt;
   color: var(--theme-color);

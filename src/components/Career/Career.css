@@ -6,8 +6,14 @@
 }
 
 .timeline>li {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     display: block;
+}
+
+.timeline-content span {
+    color: var(--theme-color);
+    font-size: 1em;
+    font-weight: bold;
 }
 
 /* for Desktop */
@@ -16,21 +22,35 @@
         overflow: hidden;
         margin: 0;
         position: relative;
+        height: auto;
     }
 
     .timeline-date {
         width: 110px;
         float: left;
-        padding-top: 20px;
+        height: auto;
+        padding-top: 5px;
+    }
+
+    .timeline-date div {
+        width: 100%;
+        text-align: center;
     }
 
     .timeline-content {
         width: 75%;
         float: left;
         height: 70px;
-        padding-top: 20px;
         border-left: 3px #e5e5d1 solid;
         padding-left: 30px;
+        height: 100px;
+    }
+
+    .timeline-content span {
+        color: var(--theme-color);
+        font-size: 1.5em;
+        font-weight: bold;
+        height: 100%;
     }
 
     .timeline-content:before {
@@ -40,7 +60,7 @@
         background: var(--theme-color);
         position: absolute;
         left: 106px;
-        top: 24px;
+        top: 12px;
         border-radius: 100%;
     }
 }

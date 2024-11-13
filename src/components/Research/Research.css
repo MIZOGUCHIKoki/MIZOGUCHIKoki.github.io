@@ -1,0 +1,62 @@
+.Paper {
+    list-style: none;
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.Paper>li {
+    margin-right: 20px;
+    margin-top: 10px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+
+.Paper-content {
+    border: dashed 2px #668ad8;
+    /*破線 太さ 色*/
+    border-radius: 8px;
+    padding: 10px;
+    float: left;
+    width: 80%;
+}
+
+.Paper-content .title {
+    color: var(--theme-color);
+    font-size: 1.5em;
+}
+
+.Paper-prop {
+    width: 100px;
+    /* border: solid 2px black; */
+    float: left;
+    /* padding-top: 20px; */
+    height: auto;
+}
+
+.Paper-date {
+    width: 100%;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.Paper-type {
+    width: 100%;
+    text-align: left;
+    height: auto;
+    margin-top: 10px;
+}
+
+.Paper-type span {
+    background-color: var(--theme-color);
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+}
