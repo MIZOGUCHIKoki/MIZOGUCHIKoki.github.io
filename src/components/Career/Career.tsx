@@ -7,7 +7,9 @@ import PageTitle from '../Helpers/Helpers';
 export default function Sidebar(): JSX.Element {
     return (
         <div className='Contents'>
-            {PageTitle()}
+            <h2>
+                Career
+            </h2>
             <ul className='timeline'>
                 {CareerData.map((value: CareerDataItem, key: number) => (
                     CarrerCard(value, key)

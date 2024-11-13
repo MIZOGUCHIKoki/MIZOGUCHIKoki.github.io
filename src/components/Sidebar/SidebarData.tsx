@@ -1,7 +1,6 @@
 import HomeIcon from '@mui/icons-material/Home';
-import ArticleIcon from '@mui/icons-material/Article';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import BiotechIcon from '@mui/icons-material/Biotech';
 
 import React from 'react';
@@ -19,9 +18,9 @@ export const SidebarData: SidebarDataItem[] = [
         link: '/home',
     },
     {
-        title: 'Career',
-        icon: <BusinessCenterIcon />,
-        link: '/career'
+        title: 'About Me',
+        icon: < AccountCircleIcon />,
+        link: '/about'
     },
     {
         title: 'Research',

@@ -51,23 +51,28 @@ nav ul li #title {
 }
 
 .Sidebar {
-    height: 100%;
+    height: 1000px;
     width: 250px;
     background-color: var(--theme-color);
-    position: sticky;
 }
 
-.SidebarList {
+.Sidebar ul {
     height: auto;
     padding: 0;
     width: 100%;
 }
 
-.SidebarList #active {
+.Sidebar div {
+    position: sticky;
+    top: 0;
+    align-items: flex-start;
+}
+
+.Sidebar ul li #active {
     background-color: var(--hovar-color);
 }
 
-.SidebarList .row {
+.Sidebar ul li {
     width: 100%;
     height: 100px;
     display: flex;
@@ -76,19 +81,19 @@ nav ul li #title {
     align-items: center;
 }
 
-.SidebarList .row:hover {
+.Sidebar ul li:hover {
     cursor: pointer;
     background-color: var(--hovar-color);
 }
 
-.SidebarList .row #icon {
+.Sidebar ul li #icon {
     flex: 30%;
     display: grid;
     place-items: center;
 
 }
 
-.SidebarList .row #title {
+.Sidebar ul li #title {
     flex: 70%;
 }
 
