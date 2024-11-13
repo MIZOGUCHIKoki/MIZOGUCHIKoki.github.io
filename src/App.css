@@ -1,9 +1,12 @@
-* {
-}
-
 :root {
   --theme-color: #2d445d;
   --hovar-color: #3b627a;
+  --back-color: #b0e0e6;
+
+  --text-color-onTheme: #ffffff;
+  --text-color-onBack: #000000;
+
+  --smartphone-width: 751px;
 }
 
 .App {
@@ -12,10 +15,19 @@
   display: flex;
 }
 
+/* For smartphone */
+@media (max-width: 751px) {
+  .App {
+    display: block;
+  }
+
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: solid 1px blue; */
 }
 
 .Contents {

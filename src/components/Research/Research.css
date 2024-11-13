@@ -12,10 +12,12 @@
     overflow: hidden;
     position: relative;
     height: auto;
+    background-color: var(--back-color);
+    padding: 10px;
 }
 
 .Paper-content {
-    border: dashed 2px #668ad8;
+    /* border: dashed 2px #668ad8; */
     /*破線 太さ 色*/
     border-radius: 8px;
     padding: 10px;
