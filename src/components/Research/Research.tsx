@@ -30,7 +30,7 @@ export default function Research(): JSX.Element {
 
 function PaperCard(value: PaperDataItem, key: number): JSX.Element {
     return (
-        <li key={key}>
+        <li key={`Paper_${key}`} >
             <div className='Paper-prop'>
                 <div className='date'>{value.date}</div>
                 <div className='type'>
@@ -52,7 +52,7 @@ function PaperCard(value: PaperDataItem, key: number): JSX.Element {
 
 function PresentationCard(value: PresentationDataItem, key: number): JSX.Element {
     return (
-        <li key={key}>
+        <li key={`Presentation_${key}`}>
             <div className='Paper-prop'>
                 <div className='date'>{value.date}</div>
                 <div className='type'>

@@ -11,7 +11,7 @@ export default function Sidebar(): JSX.Element {
                 <ul>
                     {SidebarData.map((value: SidebarDataItem, key: number) => (
                         <li
-                            key={key}
+                            key={`Sidebar_${key}`}
                             id={window.location.pathname === value.link ? 'active' : ""}
                             onClick={
                                 () => window.location.pathname = value.link

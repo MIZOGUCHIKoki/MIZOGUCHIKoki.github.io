@@ -7,7 +7,7 @@ export default function PageTitle(): JSX.Element {
             {SidebarData.map((value, key) => {
                 if (value.link === window.location.pathname) {
                     return (
-                        <div>
+                        <div key={`title_${key}`}>
                             <h1>{value.icon} {value.title}</h1>
                         </div>
                     );
