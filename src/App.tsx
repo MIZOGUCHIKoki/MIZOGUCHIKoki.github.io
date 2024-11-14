@@ -5,7 +5,7 @@ import './App.css';
 import Sidebar from './components/Sidebar/Sidebar';
 import Navigationbar from './components/Sidebar/Navigationbar';
 import Home from './components/Home/Home';
-import About from './components/Career/About';
+import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Research from './components/Research/Research';
 

@@ -38,7 +38,8 @@
 h1,
 h2,
 h3 {
-  padding-top: 10pt;
-  padding-left: 10pt;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
   color: var(--theme-color);
 }

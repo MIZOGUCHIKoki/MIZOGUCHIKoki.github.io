@@ -24,8 +24,8 @@ function PaperCard(value: PaperDataItem, key: number): JSX.Element {
     return (
         <li key={key}>
             <div className='Paper-prop'>
-                <div className='Paper-date'>{value.date}</div>
-                <div className='Paper-type'>
+                <div className='date'>{value.date}</div>
+                <div className='type'>
                     <span>{value.type}</span>
                 </div>
             </div>

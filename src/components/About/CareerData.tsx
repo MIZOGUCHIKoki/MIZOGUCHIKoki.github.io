@@ -1,5 +1,5 @@
 import React from 'react';
-import { CareerDataItem } from './DataType';
+import { CareerDataItem } from './CareerType';
 
 export const CareerData: CareerDataItem[] = [
     {

@@ -1,8 +1,7 @@
 import React from 'react';
 import { CareerData } from './CareerData';
-import { CareerDataItem } from './DataType';
-import './Career.css';
-import PageTitle from '../Helpers/Helpers';
+import { CareerDataItem } from './CareerType';
+
 
 export default function Sidebar(): JSX.Element {
     return (

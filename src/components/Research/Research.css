@@ -1,19 +1,35 @@
 .Paper {
     list-style: none;
-    padding-top: 20px;
     padding-left: 20px;
+    padding-bottom: 20px;
     width: 100%;
 }
 
-.Paper>li {
+.Paper li {
     margin-right: 20px;
-    margin-top: 10px;
+    margin-bottom: 10px;
     display: block;
     overflow: hidden;
     position: relative;
     height: auto;
     background-color: var(--back-color);
     padding: 10px;
+}
+
+.Paper li:hover {
+    background-color: var(--theme-color);
+    color: var(--text-color-onTheme);
+
+    .Paper-content .title {
+        color: var(--text-color-onTheme);
+        font-weight: bold;
+    }
+
+    .Paper-prop .type span {
+        background-color: var(--text-color-onTheme);
+        color: var(--theme-color);
+    }
+
 }
 
 .Paper-content {
@@ -38,20 +54,20 @@
     height: auto;
 }
 
-.Paper-date {
+.Paper-prop .date {
     width: 100%;
     text-align: left;
     padding-top: 10px;
 }
 
-.Paper-type {
+.Paper-prop .type {
     width: 100%;
     text-align: left;
     height: auto;
     margin-top: 10px;
 }
 
-.Paper-type span {
+.Paper-prop .type span {
     background-color: var(--theme-color);
     margin-top: 10px;
     padding-left: 10px;
