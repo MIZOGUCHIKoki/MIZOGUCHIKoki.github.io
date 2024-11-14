@@ -5,6 +5,9 @@ import './Research.css';
 import { PaperData } from './PaperData';
 import { PaperDataItem } from './PaperType';
 
+import { PresentationData } from './PresentationData';
+import { PresentationDataItem } from './PaperType';
+
 export default function Research(): JSX.Element {
     return (
         <div className='Contents'>
@@ -16,6 +19,11 @@ export default function Research(): JSX.Element {
                 ))}
             </ul>
             <h2>Presentation and Poster</h2>
+            <ul className='Paper'>
+                {PresentationData.map((value: PresentationDataItem, key: number) => (
+                    PresentationCard(value, key)
+                ))}
+            </ul>
         </div>
     );
 }
@@ -39,5 +47,25 @@ function PaperCard(value: PaperDataItem, key: number): JSX.Element {
                 <span>{value.year}. </span>
             </div>
         </li >
+    );
+}
+
+function PresentationCard(value: PresentationDataItem, key: number): JSX.Element {
+    return (
+        <li key={key}>
+            <div className='Paper-prop'>
+                <div className='date'>{value.date}</div>
+                <div className='type'>
+                    <span>{value.type}</span>
+                </div>
+            </div>
+            <div className='Paper-content'>
+                <div className='title'>{value.title}</div>
+                <span className='author'>{value.presenter}. </span>
+                <span>{value.conference}, </span><br />
+                <span>{value.place}, </span>
+                <span>{value.year}. </span>
+            </div>
+        </li>
     );
 }
