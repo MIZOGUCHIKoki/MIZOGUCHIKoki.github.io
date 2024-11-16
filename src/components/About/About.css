@@ -43,7 +43,7 @@
         height: 70px;
         border-left: 3px #e5e5d1 solid;
         padding-left: 30px;
-        height: 100px;
+        height: 130px;
     }
 
     .timeline-content span {
@@ -60,7 +60,7 @@
         background: var(--theme-color);
         position: absolute;
         left: 106px;
-        top: 12px;
+        top: 9px;
         border-radius: 100%;
     }
 }
