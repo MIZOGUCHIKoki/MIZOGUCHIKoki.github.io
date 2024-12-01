@@ -26,10 +26,6 @@ export const CareerData: CareerDataItem[] = [
 
     },
     {
-        title: 'STIP2023, SIIT (Sirindhorn International Institute of Technology) Thammasat University, Thailand.',
-        date: '2024年4月',
-    },
-    {
         title: '高知県立大学法人 高知工科大学 情報学群 卒業予定',
         date: '2025年3月',
 
