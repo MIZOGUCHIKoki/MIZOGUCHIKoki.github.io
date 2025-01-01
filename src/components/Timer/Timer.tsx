@@ -9,10 +9,10 @@ export default function Timer(): JSX.Element {
         const dateTime = new Date();
         const min = (60 - dateTime.getMinutes()) % 30;
         if (min < 5) { // Break
-            setIsFocus(!isFocus);
+            setIsFocus(false);
             setMin(30 - min);
         } else { // Focus
-            setIsFocus(isFocus);
+            setIsFocus(true);
             setMin(min - 5);
         }
         const sec = (60 - dateTime.getSeconds()) % 60;
