@@ -1,18 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+
+import useSound from 'use-sound';
+import sound1 from '../../media/sound1.mp3';
 import './timer.css';
 
 export default function Timer(): JSX.Element {
+    const [play] = useSound(sound1);
     const [min, setMin] = useState<number>(0);
     const [sec, setSec] = useState<number>(0);
     const [isFocus, setIsFocus] = useState<boolean>(true);
     const getTime = () => {
         const dateTime = new Date();
         const min = (60 - dateTime.getMinutes()) % 30;
-        if (min < 5) { // Break
-            setIsFocus(false);
-            setMin(30 - min);
+        if (min < 5 && setIsFocus) { // Break
+            if (isFocus) {
+                setIsFocus(false);
+                play();
+            }
+            setMin(min);
         } else { // Focus
-            setIsFocus(true);
+            if (!isFocus) {
+                setIsFocus(true);
+                play();
+            }
             setMin(min - 5);
         }
         const sec = (60 - dateTime.getSeconds()) % 60;
@@ -25,6 +35,7 @@ export default function Timer(): JSX.Element {
         }
         return '#2d445d'; // Blue focus
     }
+
     return (
         <div>
             <div
