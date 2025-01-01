@@ -1,16 +1,20 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import './App.css';
+// import './App.css';
 import Sidebar from './components/Sidebar/Sidebar';
 import Navigationbar from './components/Sidebar/Navigationbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Research from './components/Research/Research';
+import Timer from './components/Timer/Timer';
 
 export default function App(): JSX.Element {
-  return (
+  const timerMode = true;
+  return timerMode ? (
+    <Timer />
+  ) : (
     <div className="App">
       <Sidebar />
       <Navigationbar />
