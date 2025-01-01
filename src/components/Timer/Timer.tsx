@@ -1,22 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './timer.css';
 
 export default function Timer(): JSX.Element {
     const [min, setMin] = useState<number>(0);
     const [sec, setSec] = useState<number>(0);
+    const [isFocus, setIsFocus] = useState<boolean>(true);
     const getTime = () => {
         const dateTime = new Date();
         const min = (60 - dateTime.getMinutes()) % 30;
+        if (min < 5) { // Break
+            setIsFocus(!isFocus);
+            setMin(30 - min);
+        } else { // Focus
+            setIsFocus(isFocus);
+            setMin(min - 5);
+        }
         const sec = (60 - dateTime.getSeconds()) % 60;
-        setMin(min);
         setSec(sec);
     }
     setTimeout(getTime, 1000);
     const backgroundColor = () => {
-        if (min < 5) {
-            return '#004400';
+        if (!isFocus) {
+            return '#004400'; // Green break
         }
-        return '#2d445d';
+        return '#2d445d'; // Blue focus
     }
     return (
         <div>
@@ -68,7 +75,7 @@ export default function Timer(): JSX.Element {
                                     padding: 'initial',
                                     color: 'white',
                                 }}>
-                                {min < 5 ?
+                                {!isFocus ?
                                     'BREAK TIME' :
                                     'FOCUS TIME'}
                             </span>
