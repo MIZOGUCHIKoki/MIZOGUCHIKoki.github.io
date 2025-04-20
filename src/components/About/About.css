@@ -1,67 +1,79 @@
-.timeline {
-    list-style: none;
-    padding-top: 0px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    width: 100%;
-}
+ .timeline {
+     list-style: none;
+     width: 100%;
+     box-sizing: border-box;
+     padding: 0;
+ }
 
-.timeline>li {
-    margin-bottom: 20px;
-    display: block;
-}
+ /* for Mobile */
+ @media (max-width: 749px) {
+     .timeline>li {
+         margin-bottom: 10px;
+     }
 
-.timeline-content span {
-    color: var(--theme-color);
-    font-size: 1em;
-    font-weight: bold;
-}
+     .timeline>li:nth-child(odd) {
+         background-color: #f9f9f9;
+     }
 
-/* for Desktop */
-@media (min-width : 640px) {
-    .timeline>li {
-        overflow: hidden;
-        margin: 0;
-        position: relative;
-        height: auto;
-    }
+     .timeline>li:nth-child(even) {
+         background-color: #ffffff;
+     }
 
-    .timeline-date {
-        width: 110px;
-        float: left;
-        height: auto;
-        padding-top: 5px;
-    }
+     .timeline-date {
+         display: flex;
+         align-items: center;
+     }
 
-    .timeline-date div {
-        width: 100%;
-        text-align: center;
-    }
+     .timeline-content .title {
+         color: var(--theme-color);
+         font-weight: bold;
+         height: 100%;
+     }
+ }
 
-    .timeline-content {
-        width: 75%;
-        float: left;
-        height: 70px;
-        border-left: 3px #e5e5d1 solid;
-        padding-left: 30px;
-        height: 130px;
-    }
+ /* for Desktop */
+ @media (min-width : 750px) {
+     .timeline>li {
+         overflow: hidden;
+         margin: 0;
+         position: relative;
+         height: auto;
+         width: 100%;
+     }
 
-    .timeline-content span {
-        color: var(--theme-color);
-        font-size: 1.5em;
-        font-weight: bold;
-        height: 100%;
-    }
+     .timeline-date {
+         width: 110px;
+         height: 100%;
+         text-align: center;
+         float: left;
+         padding-top: 5px;
+     }
 
-    .timeline-content:before {
-        content: '';
-        width: 12px;
-        height: 12px;
-        background: var(--theme-color);
-        position: absolute;
-        left: 106px;
-        top: 9px;
-        border-radius: 100%;
-    }
-}
+     .timeline-content {
+         width: calc(100% - 110px);
+         /* 残りの幅を使う */
+         float: left;
+         border-left: 3px #e5e5d1 solid;
+         padding-left: 30px;
+         height: 130px;
+         box-sizing: border-box;
+     }
+
+     .timeline-content .title {
+         color: var(--theme-color);
+         font-size: 1.5em;
+         font-weight: bold;
+         height: 100%;
+     }
+
+     .timeline-content:before {
+         content: '';
+         width: 12px;
+         height: 12px;
+         background: var(--theme-color);
+         position: absolute;
+         left: 106px;
+         top: 9px;
+         border-radius: 100%;
+     }
+ }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { SidebarData } from '../Sidebar/SidebarData';
 
-export default function PageTitle(): JSX.Element {
+export default function PageTitle() {
     return (
         <div>
             {SidebarData.map((value, key) => {

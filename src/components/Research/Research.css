@@ -2,6 +2,7 @@
     list-style: none;
     padding-left: 20px;
     padding-bottom: 20px;
+    box-sizing: border-box;
     width: 100%;
 }
 
