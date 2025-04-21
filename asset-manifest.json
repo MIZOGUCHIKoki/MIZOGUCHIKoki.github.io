@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/MIZOGUCHIKoki.github.io/static/css/main.f12e561a.css",
-    "main.js": "/MIZOGUCHIKoki.github.io/static/js/main.81f6b085.js",
+    "main.css": "/MIZOGUCHIKoki.github.io/static/css/main.97570224.css",
+    "main.js": "/MIZOGUCHIKoki.github.io/static/js/main.a0c595ba.js",
     "static/js/453.1eb5cc81.chunk.js": "/MIZOGUCHIKoki.github.io/static/js/453.1eb5cc81.chunk.js",
     "static/media/fig.png": "/MIZOGUCHIKoki.github.io/static/media/fig.816f5842ce52e791c2bd.png",
     "index.html": "/MIZOGUCHIKoki.github.io/index.html",
-    "main.f12e561a.css.map": "/MIZOGUCHIKoki.github.io/static/css/main.f12e561a.css.map",
-    "main.81f6b085.js.map": "/MIZOGUCHIKoki.github.io/static/js/main.81f6b085.js.map",
+    "main.97570224.css.map": "/MIZOGUCHIKoki.github.io/static/css/main.97570224.css.map",
+    "main.a0c595ba.js.map": "/MIZOGUCHIKoki.github.io/static/js/main.a0c595ba.js.map",
     "453.1eb5cc81.chunk.js.map": "/MIZOGUCHIKoki.github.io/static/js/453.1eb5cc81.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f12e561a.css",
-    "static/js/main.81f6b085.js"
+    "static/css/main.97570224.css",
+    "static/js/main.a0c595ba.js"
   ]
 }
