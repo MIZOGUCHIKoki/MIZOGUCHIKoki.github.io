@@ -9,8 +9,24 @@
   --smartphone-width: 751px;
 }
 
-.App {
-  display: flex;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (min-width: 750px) {
+  .App {
+    display: flex;
+  }
+}
+
+/* For smartphone */
+@media (max-width: 749px) {
+  .App {
+    display: block;
+  }
+
 }
 
 h1,

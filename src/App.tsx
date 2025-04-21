@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Research from './components/Research/Research';
 import Sidebar from './components/Sidebar/Sidebar';
+import Navigationbar from './components/Sidebar/NavigationBar';
 import About from './components/About/About';
 import './App.css';
 
@@ -10,9 +11,11 @@ function App() {
   return (
     <div className="App">
       <Sidebar />
+      <Navigationbar />
       <div style={{
         // width: '100%',
-        paddingLeft: '10px'
+        paddingLeft: '10px',
+        boxSizing: 'border-box',
       }}>
         <BrowserRouter>
           <Routes>

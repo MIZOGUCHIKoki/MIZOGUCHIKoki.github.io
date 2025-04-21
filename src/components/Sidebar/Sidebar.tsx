@@ -34,6 +34,9 @@ function Sidebar() {
 									window.location.pathname = item.link;
 								}}
 								className={`sidebar-item${window.location.pathname === item.link ? ' active' : ''}`}
+								style={{
+									height: '90px',
+								}}
 							>
 								<div style={{
 									display: 'flex',
