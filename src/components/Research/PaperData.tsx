@@ -10,18 +10,6 @@ export const PaperData: PaperDataItem[] = [
         year: 2025,
     },
     {
-        title: 'IoT環境に適したワンタイムパスワード認証方式',
-        author: '溝口 洸熙 (KUT), 清水 明宏 (KUT)',
-        juranl: '電子情報通信学会 信学技報',
-        vol: 124,
-        no: 257,
-        docs: 'LOIS2024-43',
-        page: '112-117',
-        tag: '国内研究会',
-        year: 2024,
-        url: 'https://ken.ieice.org/ken/paper/20241115Qc50/',
-    },
-    {
         title: 'A PUF-based Lightweight Authentication and Key Exchange Protocol for IoT with Privacy Protection and Concealed CRP',
         author: 'K. Mizoguchi (SOKENDAI), S. Fugkeaw (SIIT), A. Shimizu (KUT), M. Kumazaki (NII), H. Hasegawa (NII), and H. Takakura (NII)',
         juranl: 'IEICE Technical Report',
@@ -33,6 +21,18 @@ export const PaperData: PaperDataItem[] = [
         year: 2025,
         doi: '',
         url: 'https://ken.ieice.org/ken/paper/20250709NclD/',
+    },
+    {
+        title: 'IoT環境に適したワンタイムパスワード認証方式',
+        author: '溝口 洸熙 (KUT), 清水 明宏 (KUT)',
+        juranl: '電子情報通信学会 信学技報',
+        vol: 124,
+        no: 257,
+        docs: 'LOIS2024-43',
+        page: '112-117',
+        tag: '国内研究会',
+        year: 2024,
+        url: 'https://ken.ieice.org/ken/paper/20241115Qc50/',
     }
 ]
 
