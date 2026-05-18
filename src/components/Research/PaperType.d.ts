@@ -2,15 +2,14 @@ export type PaperDataItem = {
     title: string;
     author: string;
     juranl: string;
-    vol: number;
-    no: number;
-    docs: string;
-    page: string;
-    date: string;
-    year: number;
-    type: string;
-    doi: string;
-    url: string;
+    vol?: number;
+    no?: number;
+    docs?: string;
+    page?: string;
+    year?: number;
+    tag?: string;
+    doi?: string;
+    url?: string;
 }
 
 export type PresentationDataItem = {
@@ -18,7 +17,6 @@ export type PresentationDataItem = {
     presenter: string;
     conference: string;
     date: string;
-    year: number;
     place: string;
-    type: string;
+    tag: string;
 }

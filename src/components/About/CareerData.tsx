@@ -3,7 +3,7 @@ import { CareerDataItem } from './CareerType';
 export const CareerData: CareerDataItem[] = [
     {
         title: '熊本県熊本市生まれ',
-        date_start: new Date('2002-05-01'),
+        date_start: new Date('2002-05'),
         date_end: null,
         institution: null,
         role: null,
@@ -13,7 +13,6 @@ export const CareerData: CareerDataItem[] = [
         title: '熊本県立玉名高等学校附属中学校',
         date_start: new Date('2015-04-01'),
         date_end: new Date('2018-03-31'),
-        institution: '熊本県立玉名高等学校附属中学校',
         role: null,
         url: null
     },
@@ -21,15 +20,15 @@ export const CareerData: CareerDataItem[] = [
         title: '熊本県立玉名高等学校',
         date_start: new Date('2018-04-01'),
         date_end: new Date('2021-03-31'),
-        institution: '熊本県立玉名高等学校',
+        institution: '普通科',
         role: null,
         url: null
     },
     {
-        title: '高知工科大学 情報学群',
+        title: '高知工科大学',
         date_start: new Date('2021-04-01'),
         date_end: new Date('2025-03-31'),
-        institution: '高知工科大学 情報学群',
+        institution: '情報学群',
         role: null,
         url: null
     },
@@ -57,15 +56,30 @@ export const CareerData2: CareerDataItem[] = [
         date_start: new Date('2024-04-01'),
         date_end: new Date('2024-04-30'),
         institution: 'Sirindhorn International Institute of Technology (SIIT), Thammasat University',
-        role: 'Scholarship student',
+        role: 'Scholarship Student',
         url: 'https://www.siit.tu.ac.th/'
+    },
+    {
+        title: '高等学校 非常勤講師',
+        date_start: new Date('2025-06-11'),
+        date_end: new Date('2026-03-25'),
+        institution: '東京都立南葛飾高等学校',
+        role: '数学科',
+        url: 'https://www.metro.ed.jp/minamikatsushika-h/'
+    },
+    {
+        title: '高等学校 非常勤講師',
+        date_start: new Date('2025-04-20'),
+        date_end: new Date('2027-03-31'),
+        institution: '千葉県立松戸南高等学校',
+        role: '情報科',
+        url: 'https://cms1.chiba-c.ed.jp/matsudominami-h/'
     },
     {
         title: 'Research Assistant',
         date_start: new Date('2025-05-01'),
         date_end: new Date('2030-03-31'),
         institution: '国立情報学研究所',
-        role: 'Research Assistant',
         url: 'https://www.nii.ac.jp/'
     }
 ]

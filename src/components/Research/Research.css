@@ -13,10 +13,10 @@
     position: relative;
     height: auto;
     background-color: var(--back-color);
-    padding: 10px;
+    padding: 0px;
 }
 
-.Paper li:hover {
+/* .Paper li:hover {
     background-color: var(--theme-color);
     color: var(--text-color-onTheme);
 
@@ -30,6 +30,21 @@
         color: var(--theme-color);
     }
 
+} */
+
+hr {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: none;
+
+}
+
+hr.separator1 {
+    border-top: solid 2px var(--theme-color);
+}
+
+hr.separator2 {
+    border-top: dashed 1px var(--theme-color);
 }
 
 .Paper-content {
@@ -38,12 +53,13 @@
     border-radius: 8px;
     padding: 10px;
     float: left;
-    width: 80%;
+    width: 100%;
 }
 
 .Paper-content .title {
-    color: var(--theme-color);
-    font-size: 1.5em;
+    color: var(--text-color-onBack);
+    font-size: 1em;
+    font-weight: bold;
 }
 
 .Paper-prop {
@@ -54,27 +70,29 @@
     height: auto;
 }
 
-.Paper-prop .date {
-    width: 100%;
-    text-align: left;
-    padding-top: 10px;
-}
 
-.Paper-prop .type {
+/* .Paper-prop .type {
     width: 100%;
     text-align: left;
     height: auto;
     margin-top: 10px;
-}
+} */
 
-.Paper-prop .type span {
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--theme-color);
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+
+    margin: 3px 4px 0;
+    /* 上 右下 左 */
+
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 0;
+    padding-bottom: 0;
     text-align: center;
-    border-radius: 8px;
-    color: white;
+    border-radius: 3px;
+    height: 1.5em;
+    color: var(--text-color-onTheme);
 }

@@ -13,7 +13,7 @@ export default function Career() {
                     CarrerCard(value, key)
                 ))}
             </ul>
-            <h2>Research and Jobs</h2>
+            <h2>Jobs</h2>
             <ul className='timeline'>
                 {CareerData2.map((value: CareerDataItem, key: number) => (
                     CarrerCard(value, key)
@@ -23,7 +23,7 @@ export default function Career() {
             <ul className='timeline'>
                 <li>
                     <div className='timeline-date'>
-                        <div>2025/3/18</div>
+                        <div>{formatYearMonth(new Date('2025-03-18'))}</div>
                     </div>
                     <div className='timeline-content'>
                         <span className='title'>教員免許</span>
@@ -58,9 +58,7 @@ function CarrerCard(value: CareerDataItem, key: number) {
         <li key={`Carrer_${key}`}>
             <div className='timeline-date'>
                 <div>
-                    {value.date_start.getFullYear()}/
-                    {value.date_start.getMonth() + 1}/
-                    {value.date_start.getDate()}
+                    {formatYearMonth(value.date_start)}
                 </div>
                 <div
                     style={{
@@ -72,7 +70,7 @@ function CarrerCard(value: CareerDataItem, key: number) {
                 <div>
                     {
                         value.date_end && isBeforeToday(value.date_end)
-                            ? `${value.date_end.getFullYear()}/${value.date_end.getMonth() + 1}/${value.date_end.getDate()}`
+                            ? formatYearMonth(value.date_end)
                             : ''
                     }
                     {
@@ -101,4 +99,8 @@ function CarrerCard(value: CareerDataItem, key: number) {
             </div>
         </li >
     );
+}
+
+function formatYearMonth(date: Date) {
+    return `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}`;
 }
