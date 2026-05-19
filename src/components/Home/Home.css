@@ -1,0 +1,25 @@
+.Link-list {
+	list-style-type: none;
+	padding-left: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.Link-list li {
+	cursor: pointer;
+	width: fit-content;
+	border: 2px solid var(--theme-color);
+	border-radius: 8px;
+	padding: 10px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	background-color: white;
+}
+
+@media (min-width: 750px) and (hover: hover) and (pointer: fine) {
+	.Link-list li:hover {
+		box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.12);
+		transform: translateY(-2px);
+	}
+}

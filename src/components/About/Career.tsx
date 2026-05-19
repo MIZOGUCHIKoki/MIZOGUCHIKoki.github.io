@@ -1,5 +1,4 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
 import { CareerData, CareerData2 } from './CareerData';
 import { CareerDataItem } from './CareerType';
 import isBeforeToday from '../Helpers/IsBeforeToday';

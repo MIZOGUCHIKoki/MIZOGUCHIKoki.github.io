@@ -3,13 +3,13 @@ import React from 'react';
 // import { JSX } from 'react';
 
 export type CareerDataItem = {
-    title: React.ReactNode;
+    title: string;
     date_start: Date;
-    date_end: Date | null;
-    location?: React.ReactNode;
-    employment_type?: React.ReactNode;
-    department?: React.ReactNode;
-    url?: React.ReactNode;
-    description?: React.ReactNode;
+    date_end?: Date;
+    location?: string;
+    employment_type?: string;
+    department?: string;
+    url?: string;
+    description?: string;
 }
 

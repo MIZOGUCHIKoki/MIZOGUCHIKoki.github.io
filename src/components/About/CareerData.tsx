@@ -3,8 +3,7 @@ import { CareerDataItem } from './CareerType';
 export const CareerData: CareerDataItem[] = [
     {
         title: '熊本県熊本市生まれ',
-        date_start: new Date('2002-05'),
-        date_end: null
+        date_start: new Date('2002-05')
     },
     {
         title: '熊本県立玉名高等学校附属中学校',

@@ -2,7 +2,7 @@ import React from 'react';
 import PageTitle from '../Helpers/Title';
 
 import './Research.css';
-
+import '../Helpers/CardList.css';
 import { PaperData } from './PaperData';
 import { PaperDataItem } from './PaperType';
 
@@ -15,13 +15,13 @@ export default function Research() {
         <div className='Contents'>
             {PageTitle()}
             <h2>Publications</h2>
-            <ul className='Paper'>
+            <ul className='Card-list'>
                 {PaperData.map((value: PaperDataItem, key: number) => (
-                    PaperCard(value, key)
+                    ResearchCard(value, key)
                 ))}
             </ul>
             <h2>Oral Presentation and Poster</h2>
-            <ul className='Paper'>
+            <ul className='Card-list'>
                 {PresentationData.map((value: PresentationDataItem, key: number) => (
                     PresentationCard(value, key)
                 ))}
@@ -30,14 +30,17 @@ export default function Research() {
     );
 }
 
-function PaperCard(value: PaperDataItem, key: number) {
+function ResearchCard(value: PaperDataItem, key: number) {
+    const hasUrl = Boolean(value.url && value.url.trim() !== '');
+
     return (
-        <li key={`Paper_${key}`} onClick={() => {
-            if (value.url) {
+        <li
+            className={hasUrl ? 'is-clickable' : 'is-static'}
+            onClick={hasUrl ? () => {
                 window.open(value.url, '_blank', 'noopener,noreferrer');
-            }
-        }}>
-            <div className='Paper-content'>
+            } : undefined}
+        >
+            <div className='Card-content'>
                 <div className='title'>
                     {value.title}
                     {value.url && value.url.trim() !== '' ? (
@@ -99,13 +102,17 @@ function PaperCard(value: PaperDataItem, key: number) {
 }
 
 function PresentationCard(value: PresentationDataItem, key: number) {
+    const hasUrl = Boolean(value.url && value.url.trim() !== '');
+
     return (
-        <li key={`Presentation_${key}`} onClick={() => {
-            if (value.url) {
+        <li
+            key={`Presentation_${key}`}
+            className={hasUrl ? 'is-clickable' : 'is-static'}
+            onClick={hasUrl ? () => {
                 window.open(value.url, '_blank', 'noopener,noreferrer');
-            }
-        }}>
-            <div className='Paper-content'>
+            } : undefined}
+        >
+            <div className='Card-content'>
                 <div className='title'>{value.title}
                     {value.url && value.url.trim() !== '' ? (
                         <OpenInNewIcon style={{ fontSize: '0.8em', verticalAlign: 'middle', marginLeft: '4px' }} />

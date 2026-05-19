@@ -4,7 +4,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import BiotechIcon from '@mui/icons-material/Biotech';
-import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
+// import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
 
 export type SidebarDataItem = {
 	title: string;
