@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Research from './components/Research/Research';
@@ -10,29 +10,39 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Sidebar />
-      <Navigationbar />
-      <div style={{
-        width: '100%',
-        paddingLeft: '10px',
-        paddingRight: '10px',
-        boxSizing: 'border-box',
-      }}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/research" element={<Research />} />
-            <Route path="/contact" element={<div>Contact</div>} />
-            <Route path="/timer" element={<div>Timer</div>} />
-            <Route path="/" element={<Home />} />
-            <Route path="*" element={<div>404 Not Found</div>} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-    </div>
+    <>
+      {/* ページ要素のコンポーネント名をタイトルに使うラッパーを使用します */}
+      <div className="App">
+        <Sidebar />
+        <Navigationbar />
+        <div className="Main">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/home" element={<TitleWrapper element={<Home />} />} />
+              <Route path="/about" element={<TitleWrapper element={<About />} />} />
+              <Route path="/research" element={<TitleWrapper element={<Research />} />} />
+              <Route path="/contact" element={<TitleWrapper element={<div>Contact</div>} />} />
+              <Route path="/timer" element={<TitleWrapper element={<div>Timer</div>} />} />
+              <Route path="/" element={<TitleWrapper element={<Home />} />} />
+              <Route path="*" element={<TitleWrapper element={<div>404 Not Found</div>} />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </div >
+    </>
   );
+}
+
+// ページ要素のコンポーネント名を取得してタイトルに設定するラッパー
+function TitleWrapper({ element }: { element: React.ReactElement }) {
+  const type: any = element.type;
+  const name = type?.displayName || type?.name || 'Page';
+
+  useEffect(() => {
+    document.title = `${name} | 溝口洸熙`;
+  }, [name]);
+
+  return element;
 }
 
 export default App;

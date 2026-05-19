@@ -46,15 +46,23 @@ function PaperCard(value: PaperDataItem, key: number) {
                 </div>
                 <hr className='separator1'></hr>
                 <div className='author'>{value.author}. </div>
-                <hr className='separator2'></hr>
                 <div>
-                    <span>{value.juranl ? `${value.juranl}, ` : ''}</span>
+                    <span style={{ fontStyle: 'italic' }}>{value.juranl ? `${value.juranl}, ` : ''}</span>
                     <span>{value.vol !== undefined ? `Vol.${value.vol}, ` : ''}</span>
                     <span>{value.no !== undefined ? `no.${value.no}, ` : ''}</span>
                     <span>{value.docs ? `${value.docs}, ` : ''}</span>
                     <span>{value.page ? `pp.${value.page}, ` : ''}</span>
                     <span>{value.year !== undefined ? `${value.year}. ` : ''}</span>
                 </div>
+                <hr className='separator2'></hr>
+                {value.keywords ? (
+                    <div style={{ marginTop: '5px' }}>
+                        <span style={{ fontWeight: 'bold' }}> Keywords: </span>
+                        {value.keywords.map((keyword, index) => (
+                            <span key={`keyword_${index}`} className='keyword'>{keyword}</span>
+                        ))}
+                    </div>
+                ) : null}
                 <div style={{ marginTop: '5px', textAlign: 'right' }}>
                     {value.tag ? value.tag.split(',').map((tag, index) => {
                         const trimmedTag: string = tag.trim();
@@ -68,12 +76,15 @@ function PaperCard(value: PaperDataItem, key: number) {
                             return (
                                 <a
                                     key={`tag_${index}`}
-                                    className='tag'
+                                    className='tag tag-link'
                                     href={url}
                                     target='_blank'
                                     rel='noreferrer'
+                                    onClick={(e) => {
+                                        e.stopPropagation(); // Prevent the click event from propagating to the parent li element
+                                    }}
                                 >
-                                    {label} {<OpenInNewIcon style={{ fontSize: '0.8em', verticalAlign: 'middle' }} />}
+                                    {label} <OpenInNewIcon style={{ fontSize: '0.8em', verticalAlign: 'middle' }} />
                                 </a>
                             );
                         }
@@ -83,7 +94,7 @@ function PaperCard(value: PaperDataItem, key: number) {
                     }) : ''}
                 </div>
             </div>
-        </li>
+        </li >
     );
 }
 
@@ -95,7 +106,11 @@ function PresentationCard(value: PresentationDataItem, key: number) {
             }
         }}>
             <div className='Paper-content'>
-                <div className='title'>{value.title}</div>
+                <div className='title'>{value.title}
+                    {value.url && value.url.trim() !== '' ? (
+                        <OpenInNewIcon style={{ fontSize: '0.8em', verticalAlign: 'middle', marginLeft: '4px' }} />
+                    ) : null}
+                </div>
                 <hr className='separator1'></hr>
                 <div className='author'>{value.presenter}. </div>
                 <hr className='separator2'></hr>

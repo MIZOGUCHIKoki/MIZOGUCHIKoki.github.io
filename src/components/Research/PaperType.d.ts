@@ -10,6 +10,7 @@ export type PaperDataItem = {
     tag?: string;
     doi?: string;
     url?: string;
+    keywords?: string[];
 }
 
 export type PresentationDataItem = {

@@ -40,3 +40,10 @@ h2,
 h3 {
   color: var(--theme-color);
 }
+
+.Main {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}

@@ -4,7 +4,6 @@ import { CareerData, CareerData2 } from './CareerData';
 import { CareerDataItem } from './CareerType';
 import isBeforeToday from '../Helpers/IsBeforeToday';
 import formatYearMonth from '../Helpers/FormatYearMonth';
-
 export default function Career() {
     return (
         <div>
