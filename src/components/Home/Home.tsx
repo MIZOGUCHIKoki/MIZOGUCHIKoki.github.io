@@ -1,10 +1,8 @@
 import React from 'react';
-import PageTitle from '../Helpers/Title';
 
 export default function Home() {
 	return (
 		<div className='Contents'>
-			{PageTitle()}
 			<div>
 				<h2>Welcome to my personal website!</h2>
 				<p>

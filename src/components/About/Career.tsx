@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { CareerData, CareerData2 } from './CareerData';
 import { CareerDataItem } from './CareerType';
 import isBeforeToday from '../Helpers/IsBeforeToday';
+import formatYearMonth from '../Helpers/FormatYearMonth';
 
 export default function Career() {
     return (
@@ -91,7 +92,7 @@ function CarrerCard(value: CareerDataItem, key: number) {
                             : null
                     }
                     {
-                        value.role !== null && value.role !== value.title
+                        value.role && value.role !== value.title
                             ? (<span>({value.role})</span>)
                             : null
                     }
@@ -99,8 +100,4 @@ function CarrerCard(value: CareerDataItem, key: number) {
             </div>
         </li >
     );
-}
-
-function formatYearMonth(date: Date) {
-    return `${date.getFullYear()}/${String(date.getMonth() + 1).padStart(2, '0')}`;
 }

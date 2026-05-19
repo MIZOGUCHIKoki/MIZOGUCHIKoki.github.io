@@ -7,10 +7,14 @@
 	nav {
 		width: 100%;
 		height: 50px;
-		background-color: var(--theme-color);
+		background-color: var(--theme-color-faint);
 		text-align: center;
 		padding: 0;
 		margin: 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
 	}
 
 	nav ul {
@@ -18,7 +22,7 @@
 		height: 100%;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 10px;
+		padding: 0 0px;
 		margin: 0;
 	}
 
@@ -29,11 +33,12 @@
 		list-style: none;
 		flex-direction: column;
 		padding: 15px 5px;
-		color: var(--text-color-onTheme);
+		color: var(--theme-color);
 	}
 
 	nav ul #active {
-		background-color: var(--hovar-color);
+		background-color: var(--theme-color-muted);
+		color: var(--text-color-onTheme);
 		height: 100%;
 	}
 
@@ -51,10 +56,30 @@
 
 }
 
-/* For PC */
+/* For PC (Desktop) */
 @media (min-width: 750px) {
 	nav {
 		display: none;
+	}
+
+	.sidebar {
+		text-align: center;
+		height: 2000px;
+		width: 220px;
+		background-color: var(--theme-color-faint);
+	}
+
+	.sidebar>div {
+		position: sticky;
+		top: 0px;
+		align-items: flex-start;
+	}
+
+	.sidebar ul {
+		margin: 10px 0px;
+		padding: 0px;
+		height: 100%;
+		width: 100%;
 	}
 
 	.sidebar-item {
@@ -63,14 +88,65 @@
 		list-style: none;
 		margin: 0;
 		padding: 20px;
-		height: 50px;
+		height: 90px;
 		align-items: center;
 		background-color: transparent;
 		transition: background-color 0.2s ease;
+		color: var(--theme-color);
 	}
 
 	.sidebar-item:hover,
 	.sidebar-item.active {
-		background-color: var(--hovar-color);
+		background-color: var(--theme-color-muted);
+		color: var(--text-color-onTheme);
+	}
+
+	.sidebar-item:hover>div,
+	.sidebar-item.active>div {
+		color: var(--text-color-onTheme);
+	}
+
+	.sidebar-item>div {
+		display: flex;
+		color: var(--theme-color);
+		font-weight: bold;
+		font-size: 1.2rem;
+	}
+
+	.sidebar-item>div>div:first-child {
+		margin-right: 10px;
+	}
+
+	.sidebar-top-icon {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.sidebar-top-icon img {
+		width: 80%;
+		height: auto;
+		margin: 10px;
+	}
+
+	.sidebar-top-icon p {
+		font-size: 1.5rem;
+		margin: 0;
+		text-align: center;
+		color: var(--theme-color);
+		font-weight: 600;
+	}
+
+	.sidebar-top-icon code {
+		font-size: 1rem;
+		margin: 0;
+		text-align: center;
+		color: var(--theme-color);
+		font-weight: 600;
+	}
+
+	.sidebar-top-icon>div {
+		display: flex;
+		flex-direction: column;
 	}
 }

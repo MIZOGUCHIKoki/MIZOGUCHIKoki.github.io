@@ -16,6 +16,7 @@ function App() {
       <div style={{
         width: '100%',
         paddingLeft: '10px',
+        paddingRight: '10px',
         boxSizing: 'border-box',
       }}>
         <BrowserRouter>

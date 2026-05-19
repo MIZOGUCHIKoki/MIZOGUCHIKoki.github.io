@@ -1,36 +1,32 @@
 .Paper {
     list-style: none;
-    padding-left: 20px;
+    padding: 0 20px;
     padding-bottom: 20px;
     width: 100%;
+    margin: 0;
 }
 
 .Paper li {
-    margin-right: 20px;
+    /* margin-right: 20px; */
     margin-bottom: 10px;
     display: block;
     overflow: hidden;
     position: relative;
     height: auto;
-    background-color: var(--back-color);
+    background-color: var(--theme-color-faint);
     padding: 0px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--theme-color);
+    border-radius: 8px;
 }
 
-/* .Paper li:hover {
-    background-color: var(--theme-color);
-    color: var(--text-color-onTheme);
-
-    .Paper-content .title {
-        color: var(--text-color-onTheme);
-        font-weight: bold;
-    }
-
-    .Paper-prop .type span {
-        background-color: var(--text-color-onTheme);
-        color: var(--theme-color);
-    }
-
-} */
+.Paper li:hover {
+    background-color: var(--background-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
 
 hr {
     margin-top: 2px;
@@ -58,7 +54,7 @@ hr.separator2 {
 
 .Paper-content .title {
     color: var(--text-color-onBack);
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: bold;
 }
 

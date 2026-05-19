@@ -6,7 +6,8 @@ export const PaperData: PaperDataItem[] = [
         author: 'K. Mizoguchi (SOKENDAI), S. Fugkeaw (SIIT), M. Kumazaki (NII), H. Hasegawa (NII), and H. Takakura (NII)',
         juranl: 'Proceedings of the Tenth International Conference on Cyber-Technologies and Cyber-Systems (CYBER 2025)',
         page: '37–42',
-        tag: '国際会議,査読有,Best Paper Award',
+        tag: '筆頭著者,国際会議,査読有,Best Paper Award:https://www.iaria.org/conferences2025/AwardsCYBER25.html',
+        url: 'https://personales.upv.es/thinkmind/dl/conferences/cyber/cyber_2025/cyber_2025_1_70_80093.pdf',
         year: 2025,
     },
     {
@@ -17,7 +18,7 @@ export const PaperData: PaperDataItem[] = [
         no: 99,
         docs: 'ISEC2025-63',
         page: '312-319',
-        tag: '国内研究会',
+        tag: '筆頭著者,国内研究会',
         year: 2025,
         doi: '',
         url: 'https://ken.ieice.org/ken/paper/20250709NclD/',
@@ -30,7 +31,7 @@ export const PaperData: PaperDataItem[] = [
         no: 257,
         docs: 'LOIS2024-43',
         page: '112-117',
-        tag: '国内研究会',
+        tag: '筆頭著者,国内研究会',
         year: 2024,
         url: 'https://ken.ieice.org/ken/paper/20241115Qc50/',
     }

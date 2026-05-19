@@ -19,4 +19,5 @@ export type PresentationDataItem = {
     date: string;
     place: string;
     tag: string;
+    url?: string;
 }

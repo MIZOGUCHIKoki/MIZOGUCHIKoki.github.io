@@ -1,10 +1,13 @@
 :root {
-  --theme-color: #2d445d;
-  --hovar-color: #3b627a;
-  --back-color: #b0e0e6;
+  --theme-color: #330000;
+  --background-color: #f0f0f0;
+  /* slightly lighter than theme (use for hover/active subtle tint) */
+  --theme-color-muted: color-mix(in srgb, var(--theme-color) 88%, var(--text-color-onTheme) 12%);
+  /* faint theme tint for blocks / sidebars */
+  --theme-color-faint: color-mix(in srgb, var(--theme-color) 20%, var(--text-color-onTheme) 80%);
 
-  --text-color-onTheme: #ffffff;
-  --text-color-onBack: #000000;
+  --text-color-onTheme: var(--background-color);
+  --text-color-onBack: var(--theme-color);
 
   --smartphone-width: 751px;
 }
@@ -25,6 +28,9 @@
 @media (max-width: 749px) {
   .App {
     display: block;
+
+    /* Height of navigation bar */
+    padding-top: 50px;
   }
 
 }

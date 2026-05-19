@@ -52,10 +52,10 @@ export const CareerData2: CareerDataItem[] = [
         url: 'https://cloudlatex.io/'
     },
     {
-        title: 'Short-Term Internship Programm 2023',
+        title: 'Short-Term Internship Program 2023',
         date_start: new Date('2024-04-01'),
         date_end: new Date('2024-04-30'),
-        institution: 'Sirindhorn International Institute of Technology (SIIT), Thammasat University',
+        institution: 'Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand',
         role: 'Scholarship Student',
         url: 'https://www.siit.tu.ac.th/'
     },
