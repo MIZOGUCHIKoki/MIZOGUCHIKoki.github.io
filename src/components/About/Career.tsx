@@ -5,17 +5,24 @@ import { CareerDataItem } from './CareerType';
 import isBeforeToday from '../Helpers/IsBeforeToday';
 import formatYearMonth from '../Helpers/FormatYearMonth';
 export default function Career() {
+    const sortCurrentFirst = (arr: CareerDataItem[]) => arr.slice().sort((a, b) => {
+        const aCurrent = Boolean(a.date_end && !isBeforeToday(a.date_end));
+        const bCurrent = Boolean(b.date_end && !isBeforeToday(b.date_end));
+        if (aCurrent && !bCurrent) return -1;
+        if (!aCurrent && bCurrent) return 1;
+        return +new Date(b.date_start) - +new Date(a.date_start);
+    });
     return (
         <div>
             <h2>Biography</h2>
             <ul className='timeline'>
-                {CareerData.map((value: CareerDataItem, key: number) => (
+                {sortCurrentFirst(CareerData).map((value: CareerDataItem, key: number) => (
                     CarrerCard(value, key)
                 ))}
             </ul>
             <h2>Jobs</h2>
             <ul className='timeline'>
-                {CareerData2.map((value: CareerDataItem, key: number) => (
+                {sortCurrentFirst(CareerData2).map((value: CareerDataItem, key: number) => (
                     CarrerCard(value, key)
                 ))}
             </ul>
@@ -28,8 +35,8 @@ export default function Career() {
                     <div className='timeline-content'>
                         <span className='title'>教員免許</span>
                         <div>
-                            <span>高等学校教諭一種免許状</span>
-                            <span>（数学・情報）</span>
+                            <span style={{ marginRight: '5px' }}>高等学校教諭一種免許状</span>
+                            <span>(数学・情報)</span>
                         </div>
                     </div>
                 </li>
@@ -38,34 +45,16 @@ export default function Career() {
     );
 }
 
-function useIsDesktop(breakpoint: number = 750): Boolean {
-    const [isDesktop, setIsDesktop] = useState<Boolean>(window.innerWidth > breakpoint);
-    useEffect(() => {
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth > breakpoint);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        }
-    }, [breakpoint]);
-    return isDesktop;
-}
 
 function CarrerCard(value: CareerDataItem, key: number) {
-    const isDesktop = useIsDesktop();
     return (
         <li key={`Carrer_${key}`}>
             <div className='timeline-date'>
                 <div>
                     {formatYearMonth(value.date_start)}
                 </div>
-                <div
-                    style={{
-                        margin: isDesktop ? '5px 0' : '0 5px',
-                    }}
-                >
-                    {value.date_end ? (isDesktop ? '|' : '-') : ''}
+                <div>
+                    {value.date_end ? '--' : ''}
                 </div>
                 <div>
                     {
@@ -81,20 +70,19 @@ function CarrerCard(value: CareerDataItem, key: number) {
                 </div>
             </div>
             <div className='timeline-content'>
-                <span
-                    className='title'
-                >{value.title}</span>
-                <div>
-                    {
-                        value.title !== value.institution
-                            ? (<span>{value.institution}</span>)
-                            : null
-                    }
-                    {
-                        value.role && value.role !== value.title
-                            ? (<span>({value.role})</span>)
-                            : null
-                    }
+                <div className='title'>
+                    <span style={{ marginRight: '5px' }}>{value.title}</span>
+                    {value.location && (
+                        <span style={{ fontSize: '0.9em' }}>({value.location})</span>
+                    )}
+                </div>
+                <div style={{ marginTop: '5px' }}>
+                    {value.department && (
+                        <span style={{ marginRight: '5px' }}>{value.department}</span>
+                    )}
+                    {value.employment_type && value.employment_type !== value.title && (
+                        <span>({value.employment_type})</span>
+                    )}
                 </div>
             </div>
         </li >

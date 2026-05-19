@@ -33,9 +33,9 @@ export const SidebarData: SidebarDataItem[] = [
 		icon: <ContactMailIcon />,
 		link: '/contact'
 	},
-	{
-		title: 'Timer',
-		icon: <AccessAlarmsIcon />,
-		link: '/timer'
-	}
+	// {
+	// 	title: 'Timer',
+	// 	icon: <AccessAlarmsIcon />,
+	// 	link: '/timer'
+	// }
 ]

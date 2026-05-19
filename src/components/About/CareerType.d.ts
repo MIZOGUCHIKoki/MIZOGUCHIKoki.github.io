@@ -6,8 +6,10 @@ export type CareerDataItem = {
     title: React.ReactNode;
     date_start: Date;
     date_end: Date | null;
-    institution?: React.ReactNode;
-    role?: React.ReactNode;
-    url: React.ReactNode;
+    location?: React.ReactNode;
+    employment_type?: React.ReactNode;
+    department?: React.ReactNode;
+    url?: React.ReactNode;
+    description?: React.ReactNode;
 }
 

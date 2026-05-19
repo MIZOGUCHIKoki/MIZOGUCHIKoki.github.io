@@ -4,83 +4,77 @@ export const CareerData: CareerDataItem[] = [
     {
         title: '熊本県熊本市生まれ',
         date_start: new Date('2002-05'),
-        date_end: null,
-        institution: null,
-        role: null,
-        url: null
+        date_end: null
     },
     {
         title: '熊本県立玉名高等学校附属中学校',
         date_start: new Date('2015-04-01'),
         date_end: new Date('2018-03-31'),
-        role: null,
-        url: null
+        location: '熊本県,玉名市',
     },
     {
         title: '熊本県立玉名高等学校',
         date_start: new Date('2018-04-01'),
         date_end: new Date('2021-03-31'),
-        institution: '普通科',
-        role: null,
-        url: null
+        department: '普通科',
+        location: '熊本県,玉名市',
     },
     {
         title: '高知工科大学',
         date_start: new Date('2021-04-01'),
         date_end: new Date('2025-03-31'),
-        institution: '情報学群',
-        role: null,
-        url: null
+        location: '高知県,香美市',
+        department: '情報学群',
     },
     {
         title: '総合研究大学院大学 先端学術院 情報学コース',
         date_start: new Date('2025-04-01'),
         date_end: new Date('2030-03-31'),
-        institution: '総合研究大学院大学 先端学術院 情報学コース',
-        role: '博士一貫課程',
+        location: '東京都,千代田区',
+        department: '5年一貫博士 情報学コース',
         url: 'https://www.soken.ac.jp/'
     }
 ]
 
 export const CareerData2: CareerDataItem[] = [
     {
-        title: 'Web service contributor',
+        title: 'Cloud LaTeX',
         date_start: new Date('2022-09-01'),
         date_end: new Date('2030-03-31'),
-        institution: 'Cloud LaTeX',
-        role: 'Operation Team',
-        url: 'https://cloudlatex.io/'
+        department: 'Operation Team',
+        employment_type: 'Part-time'
     },
     {
-        title: 'Short-Term Internship Program 2023',
+        title: 'Sirindhorn International Institute of Technology (SIIT)',
         date_start: new Date('2024-04-01'),
         date_end: new Date('2024-04-30'),
-        institution: 'Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand',
-        role: 'Scholarship Student',
-        url: 'https://www.siit.tu.ac.th/'
+        location: 'Pathum Thani,Thailand',
+        department: 'Short-Term Internship Program 2023',
+        employment_type: 'Internship'
     },
     {
-        title: '高等学校 非常勤講師',
+        title: '東京都立南葛飾高等学校',
         date_start: new Date('2025-06-11'),
         date_end: new Date('2026-03-25'),
-        institution: '東京都立南葛飾高等学校',
-        role: '数学科',
-        url: 'https://www.metro.ed.jp/minamikatsushika-h/'
+        location: '東京都,葛飾区',
+        department: '数学科',
+        employment_type: '非常勤講師',
     },
     {
-        title: '高等学校 非常勤講師',
+        title: '千葉県立松戸南高等学校',
         date_start: new Date('2025-04-20'),
         date_end: new Date('2027-03-31'),
-        institution: '千葉県立松戸南高等学校',
-        role: '情報科',
-        url: 'https://cms1.chiba-c.ed.jp/matsudominami-h/'
+        location: '千葉県,松戸市',
+        department: '情報科',
+        employment_type: '非常勤講師',
     },
     {
-        title: 'Research Assistant',
+        title: '国立情報学研究所',
         date_start: new Date('2025-05-01'),
         date_end: new Date('2030-03-31'),
-        institution: '国立情報学研究所',
-        url: 'https://www.nii.ac.jp/'
+        location: '東京都,千代田区',
+        department: 'ストラテジックサイバーレジリエンス研究開発センター',
+        employment_type: 'Research Assistant',
     }
 ]
 

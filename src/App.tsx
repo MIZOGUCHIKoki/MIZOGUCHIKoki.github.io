@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Navigationbar from './components/Sidebar/NavigationBar';
 import About from './components/About/About';
 import Home from './components/Home/Home';
+import Contact from './components/Contact/Contact';
 import './App.css';
 
 function App() {
@@ -21,8 +22,8 @@ function App() {
               <Route path="/home" element={<TitleWrapper element={<Home />} />} />
               <Route path="/about" element={<TitleWrapper element={<About />} />} />
               <Route path="/research" element={<TitleWrapper element={<Research />} />} />
-              <Route path="/contact" element={<TitleWrapper element={<div>Contact</div>} />} />
-              <Route path="/timer" element={<TitleWrapper element={<div>Timer</div>} />} />
+              <Route path="/contact" element={<TitleWrapper element={<Contact />} />} />
+              {/* <Route path="/timer" element={<TitleWrapper element={<div>Timer</div>} />} /> */}
               <Route path="/" element={<TitleWrapper element={<Home />} />} />
               <Route path="*" element={<TitleWrapper element={<div>404 Not Found</div>} />} />
             </Routes>

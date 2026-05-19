@@ -64,7 +64,7 @@
 
 	.sidebar {
 		text-align: center;
-		height: 2000px;
+		min-height: 100vh;
 		width: 220px;
 		background-color: var(--theme-color-faint);
 	}

@@ -23,25 +23,11 @@
     border-radius: 8px;
 }
 
-.Paper li:hover {
-    background-color: var(--background-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    transform: translateY(-3px);
-}
-
 hr {
     margin-top: 2px;
     margin-bottom: 2px;
     border: none;
 
-}
-
-hr.separator1 {
-    border-top: solid 2px var(--theme-color);
-}
-
-hr.separator2 {
-    border-top: dashed 1px var(--theme-color);
 }
 
 .Paper-content {
@@ -114,7 +100,16 @@ hr.separator2 {
     text-decoration: none;
 }
 
-.tag-link:hover {
-    background-color: var(--theme-color-faint);
-    color: var(--theme-color);
+/* For devices that actually support hover */
+@media (min-width: 750px) and (hover: hover) and (pointer: fine) {
+    .Paper li:hover {
+        background-color: var(--background-color);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        transform: translateY(-3px);
+    }
+
+    .tag-link:hover {
+        background-color: var(--theme-color-faint);
+        color: var(--theme-color);
+    }
 }

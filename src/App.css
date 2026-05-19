@@ -9,7 +9,7 @@
   --text-color-onTheme: var(--background-color);
   --text-color-onBack: var(--theme-color);
 
-  --smartphone-width: 751px;
+  --smartphone-width: 750px;
 }
 
 *,
@@ -46,4 +46,12 @@ h3 {
   padding-left: 10px;
   padding-right: 10px;
   box-sizing: border-box;
+}
+
+hr.separator1 {
+  border-top: solid 2px var(--theme-color);
+}
+
+hr.separator2 {
+  border-top: dashed 1px var(--theme-color);
 }

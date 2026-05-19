@@ -15,7 +15,7 @@
      }
 
      .timeline>li:nth-child(even) {
-         background-color: color-mix(in srgb, var(--theme-color-faint) 8%, var(--background-color));
+         background-color: color-mix(in srgb, var(--theme-color-faint) 50%, var(--background-color));
      }
 
      .timeline-date {
@@ -33,30 +33,33 @@
  /* for Desktop */
  @media (min-width : 750px) {
      .timeline>li {
-         overflow: hidden;
-         margin: 0;
+         display: flex;
+         align-items: center;
          position: relative;
          height: auto;
          width: 100%;
-         border-bottom: solid 1px var(--theme-color-faint);
          border-top: solid 1px var(--theme-color-faint);
+         padding: 10px 0;
+         /* 上下のマージンを追加 */
+     }
+
+     .timeline>li:last-child {
+         border-bottom: solid 1px var(--theme-color-faint);
      }
 
      .timeline-date {
-         width: 110px;
-         height: 100%;
-         text-align: center;
-         float: left;
-         padding-top: 5px;
+         width: 140px;
+         height: auto;
+         display: flex;
+         align-items: center;
      }
 
      .timeline-content {
-         width: calc(100% - 110px);
-         /* 残りの幅を使う */
-         float: left;
-         border-left: 3px var(--theme-color) solid;
-         padding-left: 30px;
-         height: 80px;
+         flex: 1;
+         /* 残りのスペースを占める */
+
+         padding-left: 10px;
+         height: auto;
      }
 
      .timeline-content .title {
@@ -64,16 +67,5 @@
          font-size: 1.1em;
          font-weight: bold;
          height: 100%;
-     }
-
-     .timeline-content:before {
-         content: '';
-         width: 12px;
-         height: 12px;
-         background: var(--theme-color);
-         position: absolute;
-         left: 106px;
-         top: 9px;
-         border-radius: 100%;
      }
  }
