@@ -67,6 +67,10 @@ export default function Home() {
 					))}
 				</ul>
 			</div>
+			<h2>Website Status</h2>
+			<a href='https://github.com/MIZOGUCHIKoki/MIZOGUCHIKoki.github.io/actions/workflows/lint.yaml' target='_blank' rel='noopener noreferrer'>
+				<img src='https://github.com/MIZOGUCHIKoki/MIZOGUCHIKoki.github.io/actions/workflows/lint.yaml/badge.svg' alt='GitHub Actions Status' />
+			</a>
 		</div>
 	)
 }
