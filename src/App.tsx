@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Research from './components/Research/Research';
+import Activity from './components/Research/Research';
 import Sidebar from './components/Sidebar/Sidebar';
 import Navigationbar from './components/Sidebar/NavigationBar';
 import About from './components/About/About';
@@ -21,7 +21,8 @@ function App() {
             <Routes>
               <Route path="/home" element={<TitleWrapper element={<Home />} />} />
               <Route path="/about" element={<TitleWrapper element={<About />} />} />
-              <Route path="/research" element={<TitleWrapper element={<Research />} />} />
+              <Route path="/activity" element={<TitleWrapper element={<Activity />} />} />
+              <Route path="/research" element={<TitleWrapper element={<Activity />} />} />
               <Route path="/contact" element={<TitleWrapper element={<Contact />} />} />
               {/* <Route path="/timer" element={<TitleWrapper element={<div>Timer</div>} />} /> */}
               <Route path="/" element={<TitleWrapper element={<Home />} />} />

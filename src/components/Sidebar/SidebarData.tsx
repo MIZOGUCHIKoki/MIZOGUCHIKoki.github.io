@@ -24,9 +24,9 @@ export const SidebarData: SidebarDataItem[] = [
 		link: '/about'
 	},
 	{
-		title: 'Research',
+		title: 'Activity',
 		icon: <BiotechIcon />,
-		link: '/research'
+		link: '/activity'
 	},
 	{
 		title: 'Contact',

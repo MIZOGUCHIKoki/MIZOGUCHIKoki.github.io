@@ -10,7 +10,7 @@ import { PresentationData } from './PresentationData';
 import { PresentationDataItem } from './PaperType';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-export default function Research() {
+export default function Activity() {
     return (
         <div className='Contents'>
             {PageTitle()}
@@ -123,7 +123,7 @@ function PresentationCard(value: PresentationDataItem, key: number) {
                 <hr className='separator2'></hr>
                 <div>
                     <span>{value.conference}, </span><br />
-                    <span>{value.place}, </span>
+                    <span>{value.place}. </span>
                 </div>
             </div>
         </li>

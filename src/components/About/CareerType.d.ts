@@ -1,7 +1,3 @@
-import React from 'react';
-// Ensure React types are available
-// import { JSX } from 'react';
-
 export type CareerDataItem = {
     title: string;
     date_start: Date;
