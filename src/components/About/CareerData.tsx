@@ -89,7 +89,7 @@ export const CertificateData: CertificateDataItem[] = [
         description: '高知県警察のサイバーセキュリティ啓発活動への協力に対して授与されました．',
         reference: [{
             href: 'https://www.kochi-tech.ac.jp/news/2025/006649.html',
-            text: '高知県警察本部より学生団体「Cykut」の卒業生へ感謝状が贈呈されました'
+            text: 'NEWS & TOPICS | 高知工科大学'
         }]
     }
 ]
