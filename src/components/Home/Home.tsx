@@ -7,6 +7,7 @@ import { NewsDataItem } from './NewsData';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Reference } from '../Helpers/Reference';
 
 type LinkItemData = {
 	label: string;
@@ -43,16 +44,19 @@ export default function Home() {
 	return (
 		<div className='Contents'>
 			<h2>Welcome to my personal website!</h2>
-			<div style={{ width: '90%', margin: '0 auto' }}>
+			<div style={{ margin: '0 auto', textAlign: 'left' }}>
 				<p>
-					みなさん．こんにちは．
-					このサイトは，私の個人サイトです．
-					このサイトでは，私の研究内容や，私が興味を持っていることなどを紹介していきます．
-					また，私の研究内容についての論文や，私が参加したイベントなども紹介していきます．
-					このサイトを通じて，私の研究内容や，私が興味を持っていることなどを知っていただければ幸いです．
-					どうぞよろしくお願いいたします．
+					総合研究大学院大学（SOKENDAI）で5年一貫博士課程に所属しています．
+					情報学コースです．
+					普段は国立情報学研究所{Reference('高倉研究室', 'https://www.tkkr.nii.ac.jp/')}にて研究を行っています．
+				</p>
+				<p>
+					研究テーマは，厳しい制約下にあるIoT機器にも適用可能な，認証鍵交換方式，物理複製困難関数(PUF)，暗号プロトコルの安全性解析などです．
 				</p>
 			</div>
+			<h2>
+
+			</h2>
 			<h2>Link</h2>
 			<ul className='Link-list'>
 				{linkItems.map((item) => (
@@ -67,10 +71,6 @@ export default function Home() {
 					))}
 				</ul>
 			</div>
-			<h2>Website Status</h2>
-			<a href='https://github.com/MIZOGUCHIKoki/MIZOGUCHIKoki.github.io/actions/workflows/lint.yaml' target='_blank' rel='noopener noreferrer'>
-				<img src='https://github.com/MIZOGUCHIKoki/MIZOGUCHIKoki.github.io/actions/workflows/lint.yaml/badge.svg' alt='GitHub Actions Status' />
-			</a>
 		</div>
 	)
 }

@@ -1,0 +1,14 @@
+.reference-link {
+	color: var(--theme-color);
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	margin: 0 5px;
+	background-color: var(--theme-color-faint);
+	padding: 0px 6px;
+	font-weight: bold;
+}
+
+.reference-link:visited {
+	color: var(--theme-color);
+}

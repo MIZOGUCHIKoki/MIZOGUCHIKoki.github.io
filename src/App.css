@@ -10,6 +10,10 @@
   --text-color-onBack: var(--theme-color);
 
   --smartphone-width: 750px;
+
+  --list-transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  --box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 4px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 *,

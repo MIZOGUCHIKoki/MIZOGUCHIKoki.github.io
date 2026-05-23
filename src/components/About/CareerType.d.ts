@@ -9,3 +9,14 @@ export type CareerDataItem = {
     description?: string;
 }
 
+export type CertificateDataItem = {
+    title: string;
+    date: Date;
+    exp_date?: Date;
+    issuer: string;
+    description?: string;
+    reference?: {
+        href: string;
+        text: string;
+    }[];
+}

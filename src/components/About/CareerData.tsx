@@ -1,5 +1,5 @@
 import { CareerDataItem } from './CareerType';
-
+import { CertificateDataItem } from './CareerType';
 export const CareerData: CareerDataItem[] = [
     {
         title: '熊本県熊本市生まれ',
@@ -76,12 +76,20 @@ export const CareerData2: CareerDataItem[] = [
         employment_type: 'Research Assistant',
     }
 ]
-
-// export type CareerDataItem = {
-//     title: React.ReactNode;
-//     date_start: Date;
-//     date_end: Date;
-//     institution: React.ReactNode;
-//     role: React.ReactNode;
-//     url: React.ReactNode;
-// }
+export const CertificateData: CertificateDataItem[] = [
+    {
+        title: '高等学校教諭一種免許状 数学・情報',
+        issuer: '高知県教育委員会',
+        date: new Date('2025-03-18'),
+    },
+    {
+        title: '感謝状',
+        issuer: '高知県警察',
+        date: new Date('2025-03-18'),
+        description: '高知県警察のサイバーセキュリティ啓発活動への協力に対して授与されました．',
+        reference: [{
+            href: 'https://www.kochi-tech.ac.jp/news/2025/006649.html',
+            text: '高知県警察本部より学生団体「Cykut」の卒業生へ感謝状が贈呈されました'
+        }]
+    }
+]

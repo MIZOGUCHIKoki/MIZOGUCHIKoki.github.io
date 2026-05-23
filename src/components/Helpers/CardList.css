@@ -4,7 +4,6 @@
 	padding-bottom: 20px;
 	width: 100%;
 	margin: 0;
-	--paper-transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
 .Card-list li {
@@ -17,8 +16,8 @@
 	background-color: var(--theme-color-faint);
 	padding: 0px;
 	cursor: default;
-	transition: var(--paper-transition);
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	transition: var(--list-transition);
+	box-shadow: var(--box-shadow);
 	border: 2px solid var(--theme-color);
 	border-radius: 8px;
 }
@@ -86,7 +85,7 @@
 @media (min-width: 750px) and (hover: hover) and (pointer: fine) {
 	.Card-list li.is-clickable:hover {
 		background-color: var(--background-color);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+		box-shadow: var(--box-shadow-hover);
 		transform: translateY(-3px);
 	}
 
