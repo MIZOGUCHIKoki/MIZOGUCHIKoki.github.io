@@ -1,37 +1,11 @@
 import React from 'react';
-
 import { SidebarData } from './SidebarData';
-
 import './Sidebar.css';
 import Icon from '../../images/fig.png';
 
-function Sidebar() {
-
-	return (
-		<div className='sidebar'>
-			<div>
-				{topIcon}
-				<ul>
-					{SidebarData.map((item, index) => {
-						return (
-							<li key={index}
-								onClick={() => {
-									window.location.pathname = item.link;
-								}}
-								className={`sidebar-item${window.location.pathname === item.link ? ' active' : ''}`}
-							>
-								<div>
-									<div>{item.icon}</div>
-									<div>{item.title}</div>
-								</div>
-							</li>
-						);
-					})}
-				</ul>
-				{status}
-			</div>
-		</div>
-	);
+interface SidebarProps {
+	setCurrentPage: (page: string) => void;
+	currentPage: string;
 }
 
 const topIcon = (
@@ -54,5 +28,37 @@ const status = (
 		</a>
 	</div>
 );
+
+function Sidebar({ setCurrentPage, currentPage }: SidebarProps) {
+	const handleItemClick = (link: string) => {
+		setCurrentPage(link);
+	};
+
+	return (
+		<div className='sidebar'>
+			<div>
+				{topIcon}
+				<ul>
+					{SidebarData.map((item, index) => {
+						return (
+							<li key={index}
+								onClick={() => {
+									handleItemClick(item.label);
+								}}
+								className={`sidebar-item ${currentPage === item.label ? 'active' : ''}`}
+							>
+								<div>
+									<div>{item.icon}</div>
+									<div>{item.title}</div>
+								</div>
+							</li>
+						);
+					})}
+				</ul>
+				{status}
+			</div>
+		</div>
+	);
+}
 
 export default Sidebar;

@@ -2,20 +2,24 @@ import React from 'react';
 import './Sidebar.css';
 import { SidebarData, SidebarDataItem } from './SidebarData';
 
-export default function Navigationbar() {
+interface NavigationbarProps {
+	setCurrentPage: (page: string) => void;
+	currentPage: string;
+}
+
+export default function Navigationbar({ setCurrentPage, currentPage }: NavigationbarProps) {
 	return (
 		<nav>
 			<ul>
 				{SidebarData.map((value: SidebarDataItem, key: number) => (
 					<li
 						key={`Navigation_${key}`}
-						id={window.location.pathname === value.link ? 'active' : ""}
+						id={currentPage === value.label ? 'active' : ""}
 						onClick={
-							() => window.location.pathname = value.link
+							() => setCurrentPage(value.label)
 						}
 					>
 						<div id="icon">{value.icon}</div>
-						{/* <div id="title">{value.title}</div> */}
 					</li>
 				))}
 			</ul>
