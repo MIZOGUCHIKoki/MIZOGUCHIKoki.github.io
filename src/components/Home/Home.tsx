@@ -48,7 +48,7 @@ export default function Home() {
 				<p>
 					総合研究大学院大学（SOKENDAI）で5年一貫博士課程に所属しています．
 					情報学コースです．
-					普段は国立情報学研究所{Reference('高倉研究室', 'https://www.tkkr.nii.ac.jp/')}にて研究を行っています．
+					普段は国立情報学研究所{Reference({ name: '高倉研究室', url: 'https://www.tkkr.nii.ac.jp/' })}にて研究を行っています．
 				</p>
 				<p>
 					研究テーマは，厳しい制約下にあるIoT機器にも適用可能な，認証鍵交換方式，物理複製困難関数(PUF)，暗号プロトコルの安全性解析などです．
