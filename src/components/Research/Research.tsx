@@ -15,21 +15,24 @@ export default function Activity() {
             {PageTitle()}
             <h2>Publications</h2>
             <ul className='Card-list'>
-                {PaperData.map((value: PaperDataItem, key: number) => (
-                    ResearchCard(value, key)
+                {PaperData.map((value: PaperDataItem, index: number) => (
+                    <ResearchCard key={`paper_${index}`} value={value} />
                 ))}
             </ul>
-            <h2>Oral Presentation and Poster</h2>
+
+            <h2>Presentations</h2>
             <ul className='Card-list'>
-                {PresentationData.map((value: PresentationDataItem, key: number) => (
-                    PresentationCard(value, key)
-                ))}
+                {[...PresentationData]
+                    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                    .map((value: PresentationDataItem, index: number) => (
+                        <PresentationCard key={`presentation_${index}`} value={value} />
+                    ))}
             </ul>
-        </div >
+        </div>
     );
 }
 
-function ResearchCard(value: PaperDataItem, key: number) {
+function ResearchCard({ value }: { value: PaperDataItem }) {
     const hasUrl = Boolean(value.url && value.url.trim() !== '');
 
     return (
@@ -38,7 +41,6 @@ function ResearchCard(value: PaperDataItem, key: number) {
             onClick={hasUrl ? () => {
                 window.open(value.url, '_blank', 'noopener,noreferrer');
             } : undefined}
-            key={`Research_${key}`}
         >
             <div className='Card-content'>
                 <div className='title'>
@@ -69,10 +71,10 @@ function ResearchCard(value: PaperDataItem, key: number) {
                 <div style={{ marginTop: '5px', textAlign: 'right' }}>
                     {value.tag ? value.tag.split(',').map((tag, index) => {
                         const trimmedTag: string = tag.trim();
-                        const colonIndex: number = trimmedTag.indexOf(':'); // Check if there is a colon in the tag (-1: no colon, >=0: colon exists)
-                        const hasUrl: boolean = colonIndex > 0 && /^https?:\/\//.test(trimmedTag.slice(colonIndex + 1));
+                        const colonIndex: number = trimmedTag.indexOf(':');
+                        const hasTagUrl: boolean = colonIndex > 0 && /^https?:\/\//.test(trimmedTag.slice(colonIndex + 1));
 
-                        if (hasUrl) {
+                        if (hasTagUrl) {
                             const label: string = trimmedTag.slice(0, colonIndex).trim();
                             const url: string = trimmedTag.slice(colonIndex + 1).trim();
 
@@ -84,7 +86,7 @@ function ResearchCard(value: PaperDataItem, key: number) {
                                     target='_blank'
                                     rel='noreferrer'
                                     onClick={(e) => {
-                                        e.stopPropagation(); // Prevent the click event from propagating to the parent li element
+                                        e.stopPropagation();
                                     }}
                                 >
                                     {label} <OpenInNewIcon style={{ fontSize: '0.8em', verticalAlign: 'middle' }} />
@@ -97,22 +99,22 @@ function ResearchCard(value: PaperDataItem, key: number) {
                     }) : ''}
                 </div>
             </div>
-        </li >
+        </li>
     );
 }
 
-function PresentationCard(value: PresentationDataItem, key: number) {
+function PresentationCard({ value }: { value: PresentationDataItem }) {
     const hasUrl = Boolean(value.url && value.url.trim() !== '');
 
     return (
         <li
-            key={`Presentation_${key}`}
             className={hasUrl ? 'is-clickable' : 'is-static'}
             onClick={hasUrl ? () => {
                 window.open(value.url, '_blank', 'noopener,noreferrer');
             } : undefined}
         >
             <div className='Card-content'>
+                {value.date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
                 <div className='title'>{value.title}
                     {value.url && value.url.trim() !== '' ? (
                         <OpenInNewIcon style={{ fontSize: '0.8em', verticalAlign: 'middle', marginLeft: '4px' }} />
@@ -122,7 +124,7 @@ function PresentationCard(value: PresentationDataItem, key: number) {
                 <div className='author'>{value.presenter}. </div>
                 <hr className='separator2'></hr>
                 <div>
-                    <span>{value.conference}, </span><br />
+                    <span>{value.conference}, </span>
                     <span>{value.place}. </span>
                 </div>
             </div>
