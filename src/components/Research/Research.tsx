@@ -38,6 +38,7 @@ function ResearchCard(value: PaperDataItem, key: number) {
             onClick={hasUrl ? () => {
                 window.open(value.url, '_blank', 'noopener,noreferrer');
             } : undefined}
+            key={`Research_${key}`}
         >
             <div className='Card-content'>
                 <div className='title'>
