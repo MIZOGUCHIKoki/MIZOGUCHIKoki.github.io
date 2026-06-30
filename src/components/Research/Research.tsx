@@ -115,6 +115,7 @@ function PresentationCard({ value }: { value: PresentationDataItem }) {
         >
             <div className='Card-content'>
                 {value.date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
+                {value.endDate ? ` - ${value.endDate.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}` : ''}
                 <div className='title'>{value.title}
                     {value.url && value.url.trim() !== '' ? (
                         <OpenInNewIcon style={{ fontSize: '0.8em', verticalAlign: 'middle', marginLeft: '4px' }} />
@@ -126,6 +127,36 @@ function PresentationCard({ value }: { value: PresentationDataItem }) {
                 <div>
                     <span>{value.conference}, </span>
                     <span>{value.place}. </span>
+                </div>
+                <div style={{ marginTop: '5px', textAlign: 'right' }}>
+                    {value.tag ? value.tag.split(',').map((tag, index) => {
+                        const trimmedTag: string = tag.trim();
+                        const colonIndex: number = trimmedTag.indexOf(':');
+                        const hasTagUrl: boolean = colonIndex > 0 && /^https?:\/\//.test(trimmedTag.slice(colonIndex + 1));
+
+                        if (hasTagUrl) {
+                            const label: string = trimmedTag.slice(0, colonIndex).trim();
+                            const url: string = trimmedTag.slice(colonIndex + 1).trim();
+
+                            return (
+                                <a
+                                    key={`tag_${index}`}
+                                    className='tag tag-link'
+                                    href={url}
+                                    target='_blank'
+                                    rel='noreferrer'
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                    }}
+                                >
+                                    {label} <OpenInNewIcon style={{ fontSize: '0.8em', verticalAlign: 'middle' }} />
+                                </a>
+                            );
+                        }
+                        return (
+                            <span key={`tag_${index}`} className='tag'>{trimmedTag}</span>
+                        );
+                    }) : ''}
                 </div>
             </div>
         </li>

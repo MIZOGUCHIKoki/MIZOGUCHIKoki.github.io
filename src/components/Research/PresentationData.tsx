@@ -27,5 +27,14 @@ export const PresentationData: PresentationDataItem[] = [
         place: 'Online',
         tag: 'セミナー講師',
         url: 'https://cloudlatex.io/events/12'
+    }, {
+        title: 'IoT向けのCRP非保存・TRNG不要な暗号鍵非保持型PUF認証・鍵交換方式',
+        presenter: '溝口 洸熙',
+        conference: 'NII オープンハウス2026 ポスター出展',
+        date: new Date('2026-06-12'),
+        endDate: new Date('2026-06-13'),
+        place: '東京都千代田区 (国立情報学研究所)',
+        tag: 'ポスター発表',
+        url: 'https://event.nii.ac.jp/event/15609/module/web_page/416350/0'
     }
 ]

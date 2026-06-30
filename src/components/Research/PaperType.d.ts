@@ -18,6 +18,7 @@ export type PresentationDataItem = {
     presenter: string;
     conference: string;
     date: Date;
+    endDate?: Date;
     place: string;
     tag: string;
     url?: string;
