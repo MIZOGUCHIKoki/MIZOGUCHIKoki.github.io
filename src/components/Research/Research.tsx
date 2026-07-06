@@ -8,6 +8,7 @@ import { PaperDataItem } from './PaperType';
 import { PresentationData } from './PresentationData';
 import { PresentationDataItem } from './PaperType';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 export default function Activity() {
     return (
@@ -43,6 +44,9 @@ function ResearchCard({ value }: { value: PaperDataItem }) {
             } : undefined}
         >
             <div className='Card-content'>
+                <div className='type'>
+                    {value.type}
+                </div>
                 <div className='title'>
                     {value.title}
                     {value.url && value.url.trim() !== '' ? (
@@ -52,7 +56,7 @@ function ResearchCard({ value }: { value: PaperDataItem }) {
                 <hr className='separator1'></hr>
                 <div className='author'>{value.author}. </div>
                 <div>
-                    <span style={{ fontStyle: 'italic' }}>{value.juranl ? `${value.juranl}, ` : ''}</span>
+                    <span style={{ fontStyle: 'italic' }}>{value.journal ? `${value.journal}, ` : ''}</span>
                     <span>{value.vol !== undefined ? `Vol.${value.vol}, ` : ''}</span>
                     <span>{value.no !== undefined ? `no.${value.no}, ` : ''}</span>
                     <span>{value.docs ? `${value.docs}, ` : ''}</span>
@@ -68,6 +72,22 @@ function ResearchCard({ value }: { value: PaperDataItem }) {
                         ))}
                     </div>
                 ) : null}
+                <>
+                    {value.doi ? (
+                        <div style={{ marginTop: '5px' }}>
+                            <span><strong>DOI:</strong> </span>
+                            <a href={`https://doi.org/${value.doi}`} target='_blank' rel='noopener noreferrer'>
+                                {value.doi} <OpenInNewIcon style={{ fontSize: '0.8em', verticalAlign: 'middle', marginLeft: '4px' }} />
+                            </a>
+                        </div>
+                    ) : null}
+                    {value.location ? (
+                        <div style={{ marginTop: '5px' }}>
+                            <span><LocationOnIcon style={{ fontSize: '1em', marginRight: '4px' }} /></span>
+                            <span>{value.location}. </span>
+                        </div>
+                    ) : null}
+                </>
                 <div style={{ marginTop: '5px', textAlign: 'right' }}>
                     {value.tag ? value.tag.split(',').map((tag, index) => {
                         const trimmedTag: string = tag.trim();

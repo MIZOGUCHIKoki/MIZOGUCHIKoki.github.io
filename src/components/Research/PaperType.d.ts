@@ -1,7 +1,8 @@
 export type PaperDataItem = {
+    type: string;
     title: string;
     author: string;
-    juranl: string;
+    journal: string;
     vol?: number;
     no?: number;
     docs?: string;
@@ -10,6 +11,7 @@ export type PaperDataItem = {
     tag?: string;
     doi?: string;
     url?: string;
+    location?: string;
     keywords?: string[];
 }
 

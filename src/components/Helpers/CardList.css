@@ -41,6 +41,11 @@
 	font-weight: bold;
 }
 
+.Card-content .type {
+	color: var(--text-color-onBack);
+	font-weight: bold;
+}
+
 
 .keyword {
 	display: inline-flex;
