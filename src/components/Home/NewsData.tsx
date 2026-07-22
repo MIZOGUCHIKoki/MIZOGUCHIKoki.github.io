@@ -23,7 +23,7 @@ export const NewsData: NewsDataItem[] = [
 		</>),
 		element: (
 			<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7483371738018430976?collapsed=1"
-				height="620" width="504" title="埋め込まれた投稿">
+				height="620" title="埋め込まれた投稿">
 			</iframe>
 		),
 		keywords: ['研究', '国際会議', '口頭発表']
