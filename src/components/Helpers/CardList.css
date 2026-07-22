@@ -6,7 +6,7 @@
 	margin: 0;
 }
 
-.Card-list li {
+.Card-list>li {
 	/* margin-right: 20px; */
 	margin-bottom: 10px;
 	display: block;
@@ -35,33 +35,28 @@
 	width: 100%;
 }
 
-.Card-content .title {
+.Card-content>.title {
 	color: var(--text-color-onBack);
 	font-size: 1.1em;
 	font-weight: bold;
 }
 
-.Card-content .type {
+.Card-content>.type {
 	color: var(--text-color-onBack);
 	font-weight: bold;
 }
 
 
 .keyword {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	background-color: none;
-
+	display: inline-block;
+	background-color: transparent;
 	margin: 1px 2px;
-
-	padding-left: 3px;
-	padding-right: 3px;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 0 3px;
 	text-align: center;
-	border-radius: none;
+	border-radius: 0;
 	height: 1.5em;
+	line-height: 1.5em;
+	vertical-align: middle;
 	text-decoration: none;
 	border: solid 1px var(--theme-color);
 }

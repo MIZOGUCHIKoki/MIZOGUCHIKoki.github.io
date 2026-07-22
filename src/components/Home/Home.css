@@ -24,3 +24,20 @@
 		transform: translateY(-3px);
 	}
 }
+
+.NewsContent {
+	list-style: disc;
+	padding: 0;
+	margin: 0;
+}
+
+.NewsContent>li {
+	list-style: disc;
+	/* デフォルトの黒丸を消す */
+	padding: 0;
+	margin: 0;
+	position: relative;
+	padding-left: 2.0em;
+	/* テキストの開始位置を調整 */
+	margin-bottom: 1.0em;
+}

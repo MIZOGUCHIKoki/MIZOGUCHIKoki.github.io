@@ -112,6 +112,11 @@ function NewsItem({ item }: { item: NewsDataItem }) {
 						<img src={item.image} alt={item.title} style={{ maxWidth: '80%' }} />
 					</div>
 				)}
+				{item.element ? (
+					<div style={{ marginTop: '10px', textAlign: 'center' }}>
+						{item.element}
+					</div>
+				) : null}
 				<hr className='separator1'></hr>
 				<div className='NewsContent'>
 					{item.content}
