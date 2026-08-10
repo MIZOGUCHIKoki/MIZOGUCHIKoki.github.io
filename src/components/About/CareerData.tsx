@@ -37,6 +37,14 @@ export const CareerData: CareerDataItem[] = [
 
 export const CareerData2: CareerDataItem[] = [
     {
+        title: '我孫子吹奏楽団',
+        date_start: new Date('2025-09-01'),
+        date_end: new Date('2030-03-31'),
+        location: '千葉県,我孫子市',
+        department: '打楽器',
+        employment_type: '団員'
+    },
+    {
         title: 'Cloud LaTeX',
         date_start: new Date('2022-09-01'),
         date_end: new Date('2030-03-31'),

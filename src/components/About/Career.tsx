@@ -30,7 +30,7 @@ export default function Career() {
                     CarrerCard(value, key)
                 ))}
             </ul>
-            <h2>Jobs</h2>
+            <h2>Jobs & Activities</h2>
             <ul className='timeline'>
                 {sortCurrentFirst(CareerData2).map((value: CareerDataItem, key: number) => (
                     CarrerCard(value, key)

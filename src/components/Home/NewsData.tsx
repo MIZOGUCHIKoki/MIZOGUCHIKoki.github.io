@@ -15,20 +15,18 @@ export const NewsData: NewsDataItem[] = [
 		date: new Date('2026-08-10T16:41:00'),
 		content: (
 			<>
+				千葉県我孫子市にて開催された，我孫子吹奏楽団による「真夏のコンサート2026」に出演しました．
 				技術向上もさることながら，演奏の楽しさを改めて感じることができました．
 				自分の課題も発見できた，素敵な演奏会でした．
 			</>
 		),
 		element: (
 			<iframe
-				src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F0kmizo5%2Fposts%2Fpfbid0wfe5PYF8bn9C6v7D5NCZm2CaWm1FZGhsaChk9dc7afyGJ46knvE8gPpcYpksFhhTl&show_text=false&width=500"
-				width="500" height="375"
-				scrolling="no"
-				frameborder="0"
-				allowfullscreen="true"
-				allow="autoplay; 
-				clipboard-write; encrypted-media; picture-in-picture; web-share">
-			</iframe>
+				src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F0kmizo5%2Fposts%2Fpfbid0wfe5PYF8bn9C6v7D5NCZm2CaWm1FZGhsaChk9dc7afyGJ46knvE8gPpcYpksFhhTl&show_text=false"
+				height="250"
+				style={{ border: 0 }}
+				title="Embedded post"
+			></iframe >
 		),
 		keywords: ['楽団', '演奏会']
 	},
@@ -45,8 +43,10 @@ export const NewsData: NewsDataItem[] = [
 		</>),
 		element: (
 			<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7483371738018430976?collapsed=1"
-				height="620" title="埋め込まれた投稿">
-			</iframe>
+				height="620"
+				style={{ border: 0 }}
+				title="Embedded post"
+			></iframe>
 		),
 		keywords: ['研究', '国際会議', '口頭発表']
 	},
