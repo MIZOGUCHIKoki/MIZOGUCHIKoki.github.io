@@ -17,7 +17,6 @@ export default function Contact() {
 						style={{ verticalAlign: 'middle', width: 'auto', height: '1em' }} />
 				</p>
 				<h2>Address</h2>
-				<p>Letters and packages should be sent to:</p>
 				<p>
 					〒101-8430<br />
 					東京都 千代田区 一ツ橋2丁目1-2 国立情報学研究所 (14F 大学院生室)
