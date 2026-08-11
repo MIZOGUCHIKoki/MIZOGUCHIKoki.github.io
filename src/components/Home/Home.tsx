@@ -43,7 +43,7 @@ const sortedNewsData = NewsData.slice().sort((a, b) => b.date.getTime() - a.date
 export default function Home() {
 	return (
 		<div className='Contents'>
-			<h2>Welcome to my personal website!</h2>
+			<h2>Welcome to MIZOGUCHI Koki's personal website!</h2>
 			<div style={{ margin: '0 auto', textAlign: 'left' }}>
 				<p>
 					総合研究大学院大学（SOKENDAI）で5年一貫博士課程に所属しています．
