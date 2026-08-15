@@ -19,7 +19,8 @@ export default function Contact() {
 				<h2>Address</h2>
 				<p>
 					〒101-8430<br />
-					東京都 千代田区 一ツ橋2丁目1-2 国立情報学研究所 (14F 大学院生室)
+					東京都 千代田区 一ツ橋2丁目1-2<br />
+					国立情報学研究所 (14F 大学院生室)
 				</p>
 				<p>
 					National Institute of Informatics (14F Graduate Student Room)<br />
