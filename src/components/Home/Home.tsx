@@ -45,6 +45,7 @@ export default function Home() {
 		<div className='Contents'>
 			<h2>Welcome to MIZOGUCHI Koki's personal website!</h2>
 			<div style={{ margin: '0 auto', textAlign: 'left' }}>
+				<p> 溝口洸熙 (みぞぐち こうき) です．</p>
 				<p>
 					総合研究大学院大学（SOKENDAI）で5年一貫博士課程に所属しています．
 					情報学コースです．
