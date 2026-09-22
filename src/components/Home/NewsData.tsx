@@ -11,6 +11,24 @@ export type NewsDataItem = {
 }
 export const NewsData: NewsDataItem[] = [
 	{
+		title: 'KUT WINDBRASS 「オータムコンサート 2026」に出演しました',
+		date: new Date('2026-10-20T16:00:00'),
+		content: (<>
+			高知県香美市にて開催された，KUT WINDBRASSによる「オータムコンサート 2026」に出演しました．
+			大学1年生との年齢差を感じる会でした．
+			楽しかったです．
+		</>
+		),
+		element: (
+			<img
+				src="https://scontent-nrt1-2.xx.fbcdn.net/v/t39.30808-6/795015371_1619006736327633_872027708072794307_n.jpg?stp=dst-jpg_tt6&cstp=mx1086x724&ctp=s1086x724&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Cf9lcUCcdDEQ7kNvwGVrD9N&_nc_oc=AdrcNm32TafWW2cu3eX4fpTZSYDFWyyQZUchCeguX53JOBiZXgq_Co2wY7AXAtxNZqTwXcB0SyTeEDtzgImPFjxL&_nc_zt=23&_nc_ht=scontent-nrt1-2.xx&_nc_gid=SucagzDm9T13cME1urpAEQ&_nc_ss=7b2a8&oh=00_AQJLYv8md-YyvC96lt4gT3zz_RFrmp7OXkRDXY6hb3fjsA&oe=6AB7C5C9"
+				width="400"
+			>
+			</img >
+		),
+		keywords: ['楽団', '演奏会']
+	},
+	{
 		title: '我孫子吹奏楽団の「真夏のコンサート2026」に出演しました',
 		date: new Date('2026-08-10T16:41:00'),
 		content: (
@@ -21,12 +39,11 @@ export const NewsData: NewsDataItem[] = [
 			</>
 		),
 		element: (
-			<iframe
-				src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F0kmizo5%2Fposts%2Fpfbid0wfe5PYF8bn9C6v7D5NCZm2CaWm1FZGhsaChk9dc7afyGJ46knvE8gPpcYpksFhhTl&show_text=false"
-				height="250"
-				style={{ border: 0 }}
-				title="Embedded post"
-			></iframe >
+			<img
+				src="https://scontent-nrt6-1.xx.fbcdn.net/v/t39.30808-6/768130155_1582317259996581_3117471638950228583_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=_WjkhsMP4KQQ7kNvwHKt872&_nc_oc=AdrNJojQRzFk3nepxxJbpzk3iDLaAJNNBWk8KP8yYs_VdeTvWV2dUUAsqanKCAVDBmCRxJpVdSlfuugpSFPO1mbW&_nc_zt=23&_nc_ht=scontent-nrt6-1.xx&_nc_gid=Fpby5O0TP3FaMgyr34XyXw&_nc_ss=7b2a8&oh=00_AQJiDWGQdRuMiH94y-gULNo2VG7MXP_WltxcEDRDGU45FQ&oe=6AB7C8ED"
+				width="400"
+			>
+			</img>
 		),
 		keywords: ['楽団', '演奏会']
 	},

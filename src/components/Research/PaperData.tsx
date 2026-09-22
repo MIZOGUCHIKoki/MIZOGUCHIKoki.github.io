@@ -8,7 +8,7 @@ export const PaperData: PaperDataItem[] = [
         journal: 'Proceedings of 2026 IEEE 50th Annual Computers, Software, and Applications Conference (COMPSAC)',
         page: '2430-2435',
         tag: '筆頭著者,査読有,口頭発表',
-        url: '',
+        url: 'https://ieeexplore.ieee.org/abstract/document/11645296',
         year: 2026,
         location: 'Madrid, Spain',
         doi: '10.1109/COMPSAC69091.2026.00362',
